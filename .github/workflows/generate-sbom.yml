@@ -24,8 +24,8 @@ jobs:
         run: npm install -g @cyclonedx/cyclonedx-npm
 
       - name: Install dependencies
-        run: npm ci # Gebruik 'npm ci' voor snellere en consistente builds
-
+        run: npm install 
+        
       - name: Generate SBOM
         run: cyclonedx-npm --output-file sbom.json
 
