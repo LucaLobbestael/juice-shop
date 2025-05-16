@@ -18,13 +18,13 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '20'
+          node-version: "20"
 
       - name: Install CycloneDX CLI
         run: npm install -g @cyclonedx/cyclonedx-npm
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci # Gebruik 'npm ci' voor snellere en consistente builds
 
       - name: Generate SBOM
         run: cyclonedx-npm --output-file sbom.json
